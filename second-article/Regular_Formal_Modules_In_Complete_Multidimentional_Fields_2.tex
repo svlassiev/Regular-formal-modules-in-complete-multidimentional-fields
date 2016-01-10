@@ -1,0 +1,127 @@
+\documentclass[12pt, oneside, a4paper]{extarticle}
+\usepackage[left=4cm, right=6cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[intlimits]{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts,amssymb, amscd}
+\usepackage[cp1251]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{mathrsfs}
+\usepackage{verbatim}
+\usepackage[T2A]{fontenc}
+\usepackage{setspace}
+\usepackage{hyphenat}
+
+
+\newcommand{\Qp}{\mathbb{Q}_p}
+\newcommand{\Zp}{\mathbb{Z}_p}
+\newcommand{\Fp}{\mathbb{F}_p}
+\newcommand{\Fq}{\mathbb{F}_q}
+\newcommand{\Teich}{\mathfrak{R}}
+\newcommand{\ORing}{\mathfrak{O}}
+\newcommand{\zp}{\zeta_p}
+\newcommand{\zpp}{\zeta_{p^2}}
+\newcommand{\oo}{{\mathcal{O}}}
+\newcommand{\mm}{{\mathcal{M}}}
+\newcommand{\articleTitle}[1]{\MakeUppercase{\textbf{\nohyphens{#1}}}}
+\newcommand{\Leq}{\leqslant}
+\newcommand{\Geq}{\geqslant}
+
+\theoremstyle{definition}
+\theoremstyle{plain}
+\theoremstyle{remark}
+\newtheorem{defi}{Определение}[section]
+\newtheorem{thm}{Теорема}[section]
+\newtheorem{lem}[thm]{Лемма}
+\newtheorem{fact}[thm]{Факт}
+\newtheorem{prop}[thm]{Предложение}
+\newtheorem{cor}[thm]{Следствие}
+\newtheorem{rem}{Замечание}[section]
+
+\DeclareMathOperator{\Ker}{Ker}
+
+\title{Регулярные формальные модули\\ \indent в полных многомерных полях}
+\author{А. А. Горшков, С. В. Востоков, С. М. Власьев}
+
+\begin{document}
+\makeatletter
+\textbf{\@author}
+
+\articleTitle{\@title}
+\makeatother
+\section*{Введение}
+При исследовании нормальных расширений без высшего ветвления возникла задача описания всех неразветвленных расширений локального поля, которые вместе с основным полем являются  {\it регулярными}, т.е не содержащими нетривиальных $p$-х корней из $1$ (где $p$ --- характеристика поля вычетов локального поля). Основное локальное поле при этом называется {\it вполне регулярным}. Эта задача была решена З.И. Боревичем в работе \cite{Bor}. Основной результат этой работы, доказательство которого было упрощено Д.К. Фадеевым, является следующим.
+\begin{thm} \label{th1} (З.И. Боревич, 1962). Для того, чтобы локальное поле $K$ было вполне регулярным, необходимо и достаточно, чтобы показатель ветвления $e$ расширения $K/\mathbb{Q}_p$ не делился на $p-1$. \end{thm}
+
+Встает естественный вопрос --- является ли ограничение на индекс ветвления исходного поля, которое не является регулярным, т.е. содержит нетривиальный корень степени $p$ из $1$, достаточным для того, чтобы круговое расширение $K(\zeta_{p^n})$, $n \Geq 2$, было бы неразветвлено. Этот вопрос решается в первом параграфе работы.
+
+Задача о регулярных и вполне регулярных полях возникает в арифметике формальных модулей и она решается во втором параграфе настоящей работы.
+
+\section{Пример поля $K$, которое содержит $\zeta_p$, но $K(\zeta_{p^2})/K$ вполне разветвлено}
+$K$ --- локальное поле (конечное расширение $\Qp$),\\
+$\zeta_{p^m}$ --- первообразный корень степени $p^m$ из $1$,\\
+$e$ --- абсолютный индекс ветвления поля $K$,\\
+$\Teich$ --- мультипликативная система Тейхмюллера в поле $K$,\\
+$\ORing$ --- кольцо целых подполя инерции $T$ в $K/\Qp$,\\
+$E(f(X)) = exp(1 + {\Delta \over p} + {\Delta^2 \over {p^2}} + \ldots)(f(X))$, где $\Delta f(X) = f(X^p)$, для $f(X) \in \Zp[[X]]X$.
+Считаем, что $\zp \in K$ и индекс ветвления делится на $p$. 
+
+Докажем, что существуют поля, для которых расширение $K(\zpp)$ будет вполне разветвленным над $K$.
+
+Пусть $K_0 = \Qp(\zp)$ и $K = K_0(\sqrt[p]{\pi})$, где $\pi = 1-\zp$. Пусть $\Pi = \sqrt[p]{\pi}$.
+\begin{thm}
+Расширение $K(\zpp)/K$ вполне разветвлено.
+\end{thm}
+\begin{proof}
+В нашем случае $e = e(K/\Qp) = p(p-1)$. Рассмотрим разложение корня $\zp$ по образующим мультипликативной группы $K^*$. Пусть $a \in \Zp$ и $\omega(a) = E(a(\underline{\zeta}^p - 1)) \vert_{X = \Pi}$, где $\underline{\zeta}(X) = (1-X^p)^p$.
+
+В работе \cite{Bor} было доказано, что $\omega(a)-p$ --- примарный элемент поля $K$ (т.е. расширение $K(\sqrt[p]{\omega(a)})/K$ неразветвлено), и при этом значение символа Гильберта в поле $K$, $(,)_p: K^* \times K^* \rightarrow \langle\zp\rangle$ на паре $\Pi, \omega(a)$ равно $(\Pi, \omega(a)) = \zp^a$.
+
+Образующими $K^*$ будут элементы $\{ \Pi, \omega(a), 1 - \theta \pi^b \mid \theta \in \Teich, 1 \Leq b < p^2, p \nmid b \}$ и корень $\zp$, тем самым, раскладывается в виде
+\begin{equation} \label{eq:product}
+\zp = \omega(a)^\beta \prod\limits_{\substack{p \nmid b \\ 1 \Leq b \Leq p^2}} (1 - \theta \Pi^b)^{\alpha_{\theta,b}},
+\end{equation}
+где $\beta, \alpha_{\theta,b} \in \Zp$.
+
+Докажем сперва, что 
+\begin{equation} \label{eq:beta}
+\beta \equiv 0 \mod p.
+\end{equation}
+Для этого подсчитаем значение символа Гильберта на паре $\Pi, \zp$. Нетрудно видеть, что из соотношения Стейнберга $(\alpha, 1 - \alpha) = 1$, $\alpha \neq 0$ для символа Гильберта следует равенство
+\begin{equation} \label{eq:hilb}
+(\Pi, 1 - \theta \Pi^b) = 1, p \nmid b.
+\end{equation}
+Действительно, $1 = (\theta \Pi^b, 1 - \theta \Pi^b) = (\theta, 1 - \theta \Pi^b) \cdot (\Pi, 1 - \theta \Pi^b)^b$. При этом $\theta = \theta_1^p$ при некотором $\theta_1 \in \Teich$, так как группа $\Teich$ $p$-делима. Значит, $(\Pi, 1 - \theta \Pi^b)^b = 1$, откуда $(\Pi, 1 - \theta \Pi^b) = 1$, так как, если $(\Pi, 1 - \theta \Pi^b) = \zeta^k$ при некотором $1 \Leq k \Leq p-1$, то $\zeta^{bk} = 1$, что противоречит $p \nmid bk$.
+
+Из равенства \eqref{eq:hilb} следует 
+$$(\Pi,\zp) = (\Pi,\omega(a))^\beta \cdot \prod\limits_{\substack{p \nmid b \\ 1 \Leq b \Leq p^2}} (1 - \theta \Pi^b)^{\alpha_{\theta,b}} =$$
+$$= (\Pi,\omega(a))^\beta = \zp^{a\beta}, \text{то есть}$$
+\begin{equation} \label{eq:hilbzeta}
+(\Pi,\zp) = \zp^{a\beta}.
+\end{equation}
+
+Подсчитаем теперь значение $(\Pi,\zp)$ по явной формуле для символа Гильберта (см. \cite[12]{Vostokov}). Пусть $l(1 + f(X)))$ --- обратная функция к функции Артина-Хассе $E(f(X))$. Она была определена в \cite[\S 1, п. 1]{Vostokov}.: $l(1 + f(X)) = (1 - {\Delta \over p})\log(1 + f(X))$ для $f(X) \in X\Zp[[X]]$ и $\Delta f(X) = f(X^p)$.
+
+Тогда имеет место формула $(\Pi,\zp) = \zp^{res_X X^{-1} l(\underline{\zeta}) / ((1 - \underline{\zeta}^p)^p - 1)}$. Вычислим для $\underline{\zeta} = \underline{\zeta}(X) = 1 - X^p$ \ $res_X X^{-1} l(\underline{\zeta}) / ((1 - \underline{\zeta}^p)^p - 1) \mod p$. Ясно, что
+\begin{equation} \label{eq:onemzeta}
+(1 - \underline{\zeta}^p)^p - 1 \equiv -\underline{\zeta}^{p^2} \mod p
+\end{equation}
+Кроме того, $l(\underline{\zeta}) = (1 - {\Delta \over p}) \log(1 - X^p) = \sum\limits_{p \nmid m}{X^{pm} \over m} + \sum\limits_{m \Geq 1}{X^{p^{m+1}} - X^{p^m} \over p^m} = \sum\limits_{p \nmid m}{X^{p^m} \over m}$.
+Среди степеней $X^{pm}$, $p \nmid m$ нет степени $p^2$, значит $(\Pi, \zp) = 1$. Отсюда и из \eqref{eq:hilbzeta} следует \eqref{eq:beta}.
+
+Значит $\zp = \prod\limits_{\substack{p \nmid b \\ 1 \Leq b \Leq p^2}} (1 - \theta \Pi^b)^{\alpha_{\theta, b}} \mod K^{*p}$. Пусть степень $b$ --- наименьшая, для которой $\alpha_{\theta, b} \not\equiv 0 \mod p$. Если такой нет, то это означает, что $\zp \in K^{*p}$, что невозможно. Тогда $\zp = 1 - c\Pi^b$, где $c$ --- некоторая единица поля $K$, то есть $c = c_0 + c_1\Pi + c_2\Pi^2 + \ldots$, $c_i \in \Zp$ и $p \nmid c_0$, $1 \Leq b < {pe \over p-1}$, $p \nmid b$.
+
+Несложно видеть (!!!!!!! доказать !!!!!!!), что расширение $K(\zpp)/K$ вполне разветвлено.
+\end{proof}
+
+
+
+\begin{thebibliography}{50}
+\bibitem{F-V} Fesenko I.B., Vostokov S.V, {\it Local Fields and Their Extensions}, Second edition, 2002.
+\bibitem{F}  Востоков С.В, Волков П.П., Пак Г.К, {\it Символ Гильберта для многочленных формальных групп}, Зап. науч. сем. ПОМИ, том 400, 2012, стр. 127-132.
+\bibitem{Bor} Боревич З.И., {\it О регулярных локальных полях}, Вестник ЛГУ, 1962, стр. 142-145.
+\bibitem{Ariph} Бенуа Д.Г., Востоков С.В. {\it Арифметика группы точек формальной группы}, Зап. научн. сем. ЛОМИ, 191 (1991),  стр. 9–23.
+\bibitem{Inv} Zhukov I. B., {\it Higher dimensional local fields}, Invitation to higher local fields, 2000, стр. 5-18.
+\bibitem{Hond} Honda T., {\it On the theory of commutative formal groups}, J. Math Soc. Japan, 1970, стр. 213-246.
+\bibitem{Haz} Hazewinkel M., {\it Formal groups and applications}, Academic Press, New York, 1978.
+\end{thebibliography}
+\end{document}
