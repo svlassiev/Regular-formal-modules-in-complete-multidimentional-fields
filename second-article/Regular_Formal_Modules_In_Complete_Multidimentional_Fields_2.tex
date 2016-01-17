@@ -10,14 +10,18 @@
 \usepackage[T2A]{fontenc}
 \usepackage{setspace}
 \usepackage{hyphenat}
+\usepackage{chngcntr}
 
-
+\newcommand{\val}{\mathfrak{v}}
 \newcommand{\Qp}{\mathbb{Q}_p}
 \newcommand{\Zp}{\mathbb{Z}_p}
 \newcommand{\Fp}{\mathbb{F}_p}
 \newcommand{\Fq}{\mathbb{F}_q}
 \newcommand{\Teich}{\mathfrak{R}}
+\newcommand{\oRing}{\mathfrak{o}}
 \newcommand{\ORing}{\mathfrak{O}}
+\newcommand{\MIdeal}{\mathfrak{M}}
+\newcommand{\ML}{\mathfrak{M}_L}
 \newcommand{\zp}{\zeta_p}
 \newcommand{\zpp}{\zeta_{p^2}}
 \newcommand{\oo}{{\mathcal{O}}}
@@ -29,6 +33,7 @@
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\res}{res}
 \DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Ker}{Ker}
 
 \theoremstyle{definition}
 \theoremstyle{plain}
@@ -41,7 +46,7 @@
 \newtheorem{cor}[thm]{Следствие}
 \newtheorem{rem}{Замечание}[section]
 
-\DeclareMathOperator{\Ker}{Ker}
+\counterwithin*{equation}{section}
 
 \title{Регулярные формальные модули\\ \indent в полных многомерных полях}
 \author{А. А. Горшков, С. В. Востоков, С. М. Власьев}
@@ -84,7 +89,7 @@ $E(f(X)) = exp(1 + {\Delta \over p} + {\Delta^2 \over {p^2}} + \ldots)(f(X))$, г
 \begin{equation} \label{eq:product}
 \zp = \omega(a)^\beta \prod\limits_{\substack{p \nmid b \\ 1 \Leq b \Leq p^2}} (1 - \theta \Pi^b)^{\alpha_{\theta,b}},
 \end{equation}
-где $\beta, \alpha_{\theta,b} \in \Zp$.
+где $\beta, \alpha_{\theta,b} \in \mathbb{Z}$.
 
 Докажем сперва, что 
 \begin{equation} \label{eq:beta}
@@ -115,6 +120,72 @@ $$= (\Pi,\omega(a))^\beta = \zp^{a\beta}, \text{то есть}$$
 Значит $\zp = \prod\limits_{\substack{p \nmid b \\ 1 \Leq b \Leq p^2}} (1 - \theta \Pi^b)^{\alpha_{\theta, b}} \mod K^{*p}$. Пусть степень $b$ --- наименьшая, для которой $\alpha_{\theta, b} \not\equiv 0 \mod p$. Если такой нет, то это означает, что $\zp \in K^{*p}$, что невозможно. Тогда $\zp = 1 - c\Pi^b$, где $c$ --- некоторая единица поля $K$, то есть $c = c_0 + c_1\Pi + c_2\Pi^2 + \ldots$, $c_i \in \Zp$ и $p \nmid c_0$, $1 \Leq b < {pe \over p-1}$, $p \nmid b$.
 
 Несложно видеть, что расширение $K(\zpp)/K$ вполне разветвлено. Действительно, $\zp$ будет корнем многочлена $X + c\Pi^b - 1$, тогда $\zpp$ будет корнем многочлена $X^p + c\Pi^b - 1$. !!!! и что дальше??!!!!!
+\end{proof}
+
+\section{Формальные модули в многомерном поле}
+\subsection{Формулировка}
+Пусть $K$ --- полное многомерное поле нулевой характеристики, то есть поле, для которого имеется последовательнось полей, $K_0, K_1, \ldots, K_{n-1}, K_n = K$ таких, что $K_0$ --- совершенное поле характеристики $p$, и $K_{i-1}$ --- поле вычетов для $K_i$, $i \Leq i \Leq n$. \\
+$(t_1, t_2, \ldots, t_{n-1}, t_n = \pi)$ --- система локальных параметров поля $K$, \\
+$\oRing$ --- кольцо целых поля $K$ относительно $n$-мерного нормирования, \\
+$F(X,Y)$ --- одномерная формальная группа над $\ORing$. \\
+Будем предполагать, что $K$ --- разнохарактеристическое полное многомерное поле, то есть $char K = 0$, $char K_{n-1} = p > 0$.
+
+Пусть $k$ --- максимальное локальное поле в $K$ (конечное расширение $\Qp$), для которого поле $E = k\{\{t_1\}\} \cdots \{\{t_{n-1}\}\} ((\pi))$ содерижится в $K$. \\
+Предполагаем, что $K/E$ --- конечное расширение, и кольцо эндоморфизмов $\End_\ORing F$ формальной группы $F$ изоморфно кольцу целых $\ORing_0$ подрасширения $E_0$ в $E$. Считаем при этом, что $K/E_0$ --- конечное расширение.
+
+Пусть $(t_1^{(0)}, t_2^{(0)}, \ldots t_{n-1}^{(0)}, t_n^{(0)} = \pi_0)$ --- система локальноых параметров поля $E_0$, $\pi \in k_0$. \\
+$E_0 = k_0\{\{t_1^{(0)}\}\} \cdots \{\{t_{n-1}^{(0)}\}\} ((\pi_0))$, причем $k_0$ --- подполе $k$. Пусть, далее $L$ --- расширение поля $K$ с системой локальных параметров $(T_1, T_2, \ldots, T_{n-1}, T_n = \Pi)$, и
+\begin{equation} \label{eq:pi0andPi}
+-\pi_0=T_1^{i_1} \cdots T_{n-1}^{i_{n-1}} \Pi^{e_n} \rho u, \tag{*}
+\end{equation}
+где $\rho$ --- представитель Тейхмюллера в $L$,  $u$ --- главная единица поля $L$.
+
+Предполагаем, что поле $L$ --- регулярно относительно формальной группы $F$, то есть ядро изогении $\Ker[\pi_0]$ не содрежится в $L$ за исключением нуля. \\
+$h := ht F$ --- высотра формальной группы $F$, \\
+$\MIdeal := \ML$ --- максимальный идеал кольца целых поля $L$, \\
+$F(\MIdeal)$ --- формальный $\ORing$-модуль на идеале $\MIdeal$. 
+
+Будем называть поле $L$ вполне регулярным относительно формальной группы $F$, если $\Ker[\pi_0]$ не содержится в любом неразветвтленном расширении $M$ поля $L$.
+
+В настоящей работе доказывается следующий результат
+
+\begin{thm} \label{th:regularity}
+	Поле $L$ является вполне регулярным относительно формальной группы $F$ тогда и только тогда, когда система индексов $(i_1, \ldots, i_{n-1}, e_n)$ делится на $p^h - 1$, то есть $i_k \vdots p^h - 1$, $1 \Leq k \Leq n$ (см. \eqref{eq:pi0andPi}).
+\end{thm}
+
+\subsection{Вспомогательные результаты}
+Пусть $\xi \in \Ker[\pi_0]$, $\xi \neq 0$, $\xi \in K^{alg}$ --- произвольный элемент ядра изогении $[\pi_0]$. $[\pi_0](X) = \pi_0X\varepsilon(X) + X^{p^h}\theta r(X)$, где $\varepsilon(X), r(X) \in \ORing_0[[X]]$, при этом $\varepsilon(X) \equiv r(X) \equiv 1 \mod X$, а $\theta$ --- представитель система Тейхмюллера в кольце целых поля $k_0$. Ясно, что ${[\pi_0](X) \over X} = \pi_0 \varepsilon_1(X)^{p^h-1} + (X r_1(X))^{p^h-1}\theta$, где $\varepsilon_1(X)^{p^h-1} = \varepsilon(X)$, $r_1(X)^{p^h-1} = r(X)$. Поэтому элемент $\xi$ удовлетворяет уравнению $-pi_0 = (\xi \kappa(\xi))^{p^h-1} \theta$, где $\kappa(X) = \varepsilon_1(X)^{-1} r_1(X)$. Поэтому
+\begin{equation} \label{eq:Lxi}
+L(\xi) = L(\sqrt[p^h - 1]{-\theta^{-1}\pi_0}).
+\end{equation}
+
+Пусть $e = e(K/\Qp)$; $1 \Leq b < {pe \over p-1}$, $p \nmid b$, $\Pi$ --- простой элемент в $K$, $\varepsilon = 1 + c\Pi^b$, $c$ --- единица в $K$.
+\begin{lem}
+	Пусть $\zeta_p \in K$, тогда $K(\sqrt[p]{\varepsilon}) / K$ вполне разветвленно.
+\end{lem}
+\begin{proof}
+	Рассмотрим уравнения $X^p = \varepsilon$ и $X = Y + 1$, тогда
+	\begin{equation} \label{eq:Lxi}
+	Y^p + c_p^{p-1}Y^{p-1} + \cdots + pY = c \Pi^b \tag{*}.
+	\end{equation}
+	Пусть расширение $K(\sqrt[p]{\varepsilon})/K$ неразветвлено. Тогда, если корень уравнения \eqref{eq:Lxi} $\alpha$ --- единица, то получим противоречие: $\val_L(\alpha) = 0 \implies \val(\alpha^p + \ldots + p\alpha) = 0$, но $\val(c\Pi^b) = b \Geq 1$. Здесь и далее $\val = \val_L$ --- нормирование в поле $L = K(\sqrt[p]{\varepsilon})$.\\
+	Если $\val(\alpha) \Geq 1$, то есть два варианта.
+	\begin{enumerate}
+		\item $1 \Leq \val(\alpha) \Leq {e \over p-1}$, тогда $\val(\alpha^p + c_p^{p-1}\alpha^{p-1} + \cdots + p\alpha) = \val(\alpha^p) = p\val(\alpha)$. Но $\val(c\Pi^b) = b \not\equiv 0 \mod p$ --- противоречие.
+		\item $\val(\alpha) > {e \over p-1}$, тогда $\val(\alpha^p + c_p^{p-1}\alpha^{p-1} + \cdots + p\alpha) \Geq {pe \over p-1}$, так как $\val(\alpha^p) = p\val(\alpha) \Geq {pe \over p-1}$ и $\val(p\alpha) = e + \val(\alpha) \Geq {pe \over p-1}$. С другой стороны, $\val(c\Pi^b) = b < {pe \over p-1}$.
+	\end{enumerate}
+	Итак, предположение, что $L/K$ неразветвлено приводит к противоречию.
+\end{proof}
+\begin{cor}
+	Расширение $K(\zpp)/K$ вполне разветвлено.
+\end{cor}
+\subsection{Доказательство теоремы \eqref{th:regularity}}
+\begin{proof}
+		Пусть $\overline{e} = (e_1, \ldots, e_n)$ делится на $p^h-1$. Тогда
+		$$ -\pi_0 = (T_1^{i_1'} \cdots T_{n-1}^{i_{n-1}'} \rho_1 u_1)^{p^h-1},$$
+		где $i_k' = {i_k \over p^h-1}$, $1 \Leq k \Leq n-1$; $\rho_1^{p^h-1} = \rho$, $\rho \in \Teich$; и $u_1^{p^h-1} = u$, где $u_1$ --- главная единица в $L$. Отсюда и из \eqref{eq:Lxi} получаем $L(\xi) = L(\sqrt[p^h-1]{\theta^{-1}})$ и, значит, расширение $L/K$ неразветвлено.
+		
+		Если же $(i_1, \ldots, i_{n-1}, e_n)$ не делится на $p^h-1$, то $L(\xi)=L(\sqrt[p^h-1]{T_1^{i_1} \cdots T_{n-1}^{i_{n-1}} \Pi^{e_n}})$ и $L(\xi)/L$ поэтому разветвлено.
 \end{proof}
 
 
