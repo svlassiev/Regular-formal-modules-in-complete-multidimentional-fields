@@ -57,10 +57,14 @@
 
 \articleTitle{\@title}
 \makeatother
+
+{\scriptsize\textbf{--- Заголовок совпадает с первой статьёй ---}}
 \section{Введение}
-При исследовании нормальных расширений без высшего ветвления возникла задача описания всех неразветвленных расширений локального поля, которые вместе с основным полем являются  {\it регулярными}, то есть не содержащими нетривиальных $p$-х корней из $1$ (где $p$ --- характеристика поля вычетов локального поля). Основное локальное поле при этом называется {\it вполне регулярным}. Эта задача была решена З. И. Боревичем в работе \cite{Bor}. Основной результат этой работы, доказательство которого было упрощено Д. К. Фаддеевым, является следующим.
+При исследовании нормальных расширений без высшего ветвления возникла задача описания всех неразветвленных расширений локального поля, которые вместе с основным полем являются  {\it регулярными}, то есть не содержащими нетривиальных $p$-х корней из $1$ (где $p$ --- характеристика поля вычетов локального поля). Основное локальное поле при этом называется {\it вполне регулярным}. Эта задача была решена З. И. Боревичем в работе \cite{B}. Основной результат этой работы, доказательство которого было упрощено Д. К. Фаддеевым, является следующим.
+
+{\scriptsize\textbf{--- Первый абзац совпадает с первым абзацем первой статьи ---}}
 \begin{thm} \label{th1}
-	 Пусть $K$ --- регулярное локальное поле. Расширение $K(\zeta)/K$, где $\zeta^p = 1$, $\zeta \neq 1$, будет неразветвленным тогда итолько тогда, когда индекс ветвления $e = e(K/\Qp)$ делится на $p-1$.
+	 Пусть $K$ --- регулярное локальное поле. Расширение $K(\zeta)/K$, где $\zeta^p = 1$, $\zeta \neq 1$, будет неразветвленным тогда итолько тогда, когда индекс ветвления \linebreak $e = e(K/\Qp)$ делится на $p-1$.
 \end{thm}
 
 Встает естественный вопрос --- является ли ограничение на индекс ветвления исходного поля, которое не является регулярным, то есть содержит нетривиальный корень степени $p$ из $1$, достаточным для того, чтобы круговое расширение $K(\zeta_{p^n})$, $n \Geq 2$, было бы неразветвлено. Этот вопрос решается в первой части работы.
@@ -74,7 +78,7 @@ $e$ --- абсолютный индекс ветвления поля $K$,\\
 $\Teich$ --- мультипликативная система Тейхмюллера в поле $K$,\\
 $\ORing$ --- кольцо целых подполя инерции $T$ в $K/\Qp$,\\
 $E(f(X)) = exp(1 + {\Delta \over p} + {\Delta^2 \over {p^2}} + \ldots)(f(X))$, где $\Delta f(X) = f(X^p)$, для $f(X) \in \Zp[[X]]X$.
-Считаем, что $\zp \in K$ и индекс ветвления делится на $p$. 
+Считаем, что $\zp \in K$ и индекс ветвления $e$ делится на $p$. 
 
 Докажем, что существуют поля, для которых расширение $K(\zpp)$ будет вполне разветвленным над $K$.
 
@@ -83,11 +87,11 @@ $E(f(X)) = exp(1 + {\Delta \over p} + {\Delta^2 \over {p^2}} + \ldots)(f(X))$, г
 Расширение $K(\zpp)/K$ вполне разветвлено.
 \end{thm}
 \begin{proof}
-В нашем случае $e = e(K/\Qp) = p(p-1)$. Рассмотрим разложение корня $\zp$ по образующим мультипликативной группы $K^*$. Пусть $a \in \Zp$ и $\omega(a) = E(a(\underline{\zeta}^p - 1)) \vert_{X = \Pi}$, где $\underline{\zeta}(X) = (1-X^p)^p$.
+В нашем случае $e = e(K/\Qp) = p(p-1)$. Рассмотрим разложение корня $\zp$ по образующим мультипликативной группы $K^*$. Пусть $a \in \Zp$ и $\omega(a) = \linebreak = E(a(\underline{\zeta}^p - 1)) \vert_{X = \Pi}$, где $\underline{\zeta}(X) = (1-X^p)^p$.
 
-В работе \cite{Bor} было доказано, что $\omega(a)$ --- $p$-примарный элемент поля $K$ (то есть расширение $K(\sqrt[p]{\omega(a)})/K$ неразветвлено), и при этом значение символа Гильберта в поле $K$, $(,)_p: K^* \times K^* \rightarrow \langle\zp\rangle$ на паре $\Pi, \omega(a)$ равно $(\Pi, \omega(a)) = \zp^a$.
+В работе \cite{B} было доказано, что $\omega(a)$ --- $p$-примарный элемент поля $K$ (то есть расширение $K(\sqrt[p]{\omega(a)})/K$ неразветвлено), и при этом значение символа Гильберта в поле $K$, $(,)_p: K^* \times K^* \rightarrow \langle\zp\rangle$ на паре $\Pi, \omega(a)$ равно \linebreak $(\Pi, \omega(a)) = \zp^a$.
 
-Образующими $K^*$ будут элементы $\{ \Pi, \omega(a), 1 - \theta \pi^b \mid \theta \in \Teich, 1 \Leq b < p^2, p \nmid b \}$, и корень $\zp$, тем самым, раскладывается в виде
+Образующими $K^*$ будут элементы $\{ \Pi, \omega(a), 1 - \theta \pi^b \mid \linebreak \theta \in \Teich, 1 \Leq b < p^2, p \nmid b \}$, и корень $\zp$, тем самым, раскладывается в виде
 \begin{equation} \label{eq:product}
 \zp = \omega(a)^\beta \prod\limits_{\substack{p \nmid b \\ 1 \Leq b < p^2}} (1 - \theta \Pi^b)^{\alpha_{\theta,b}},
 \end{equation}
@@ -110,18 +114,30 @@ $$= (\Pi,\omega(a))^\beta = \zp^{a\beta}, \text{то есть}$$
 (\Pi,\zp) = \zp^{a\beta}.
 \end{equation}
 
-Подсчитаем теперь значение $(\Pi,\zp)$ по явной формуле для символа Гильберта (см. \cite[12]{Vostokov}). Пусть $l(1 + f(X)))$ --- обратная функция к функции Артина-Хассе $E(f(X))$. Она была определена в \cite[\S 1, п. 1]{Vostokov}.: $l(1 + f(X)) = (1 - {\Delta \over p})\log(1 + f(X))$ для $f(X) \in X\Zp[[X]]$ и $\Delta f(X) = f(X^p)$.
+Подсчитаем теперь значение $(\Pi,\zp)$ по явной формуле для символа Гильберта (см. \cite[12]{V}). Обозначим через $l(1 + f(X)))$ обратную функцию к функции Артина-Хассе $E(f(X))$. Она была определена в \cite[\S 1, п. 1]{V}:
+$$l(1 + f(X)) = (1 - {\Delta \over p})\log(1 + f(X))$$
+для $f(X) \in X\Zp[[X]]$ и $\Delta f(X) = f(X^p)$.
 
-Тогда имеет место формула $(\Pi,\zp) = \zp^{\res_X X^{-1} l(\underline{\zeta}) / ((1 - \underline{\zeta}^p)^p - 1)}$. Вычислим для $\underline{\zeta} = \underline{\zeta}(X) = 1 - X^p$ \ $\res_X X^{-1} l(\underline{\zeta}) / ((1 - \underline{\zeta}^p)^p - 1) \mod p$. Ясно, что
-\begin{equation} \label{eq:onemzeta}
-(1 - \underline{\zeta}^p)^p - 1 \equiv -\underline{\zeta}^{p^2} \mod p
-\end{equation}
-Кроме того, $l(\underline{\zeta}) = (1 - {\Delta \over p}) \log(1 - X^p) = \sum\limits_{p \nmid m}{X^{pm} \over m} + \sum\limits_{m \Geq 1}{X^{p^{m+1}} - X^{p^m} \over p^m} = \sum\limits_{p \nmid m}{X^{p^m} \over m}$.
-Среди степеней $X^{pm}$, $p \nmid m$ нет степени $p^2$, значит $(\Pi, \zp) = 1$. Отсюда и из \eqref{eq:hilbzeta} следует \eqref{eq:beta}.
+Тогда имеет место формула 
+$$(\Pi,\zp) = \zp^{\res_X X^{-1} l(\underline{\zeta}) / ((1 - \underline{\zeta}^p)^p - 1)}.$$
+Вычислим значение $\res_X X^{-1} l(\underline{\zeta}) / ((1 - \underline{\zeta}^p)^p - 1) \mod p$ для $\underline{\zeta} = \underline{\zeta}(X) = 1 - X^p$. Ясно, что
+$$(1 - \underline{\zeta}^p)^p - 1 \equiv -\underline{\zeta}^{p^2} \mod p.$$
+Кроме того, 
+$$ l(\underline{\zeta}) = (1 - {\Delta \over p}) \log(1 - X^p) = $$
+$$ = \sum\limits_{p \nmid m}{X^{pm} \over m} + \sum\limits_{m \Geq 1}{X^{p^{m+1}} - X^{p^m} \over p^m} = \sum\limits_{p \nmid m}{X^{p^m} \over m}.$$
+Среди степеней $X^{pm}$, $p \nmid m$ нет степени $p^2$, значит \linebreak $(\Pi, \zp) = 1$. Отсюда и из \eqref{eq:hilbzeta} следует \eqref{eq:beta}.
 
-Значит $\zp \equiv \prod\limits_{\substack{p \nmid b \\ 1 \Leq b < p^2}} (1 - \theta \Pi^b)^{\alpha_{\theta, b}} \mod K^{*p}$. Пусть степень $b$ --- наименьшая, для которой $\alpha_{\theta, b} \not\equiv 0 \mod p$. Если такой нет, то это означает, что $\zp \in K^{*p}$, что невозможно. Тогда $\zp = 1 - c\Pi^b$, где $c$ --- некоторая единица поля $K$, то есть $c = c_0 + c_1\Pi + c_2\Pi^2 + \ldots$, $c_i \in \Zp$ и $p \nmid c_0$, $1 \Leq b < {pe \over p-1}$, $p \nmid b$.
+Значит $\zp \equiv \prod\limits_{\substack{p \nmid b \\ 1 \Leq b < p^2}} (1 - \theta \Pi^b)^{\alpha_{\theta, b}} \mod K^{*p}$. Пусть степень $b$ --- наименьшая, для которой $\alpha_{\theta, b} \not\equiv 0 \mod p$. Если такой нет, то это означает, что $\zp \in K^{*p}$, что невозможно. Тогда $K(\zpp) = K(\sqrt[p]{\zp}) = K(\sqrt[p]{\varepsilon})$, где $\varepsilon = 1 - c\Pi^b$, а $c$ --- некоторая единица поля $K$, то есть $c = c_0 + c_1\Pi + c_2\Pi^2 + \ldots$, $c_i \in \Zp$ и $p \nmid c_0$, $1 \Leq b < {pe \over p-1}$, $p \nmid b$.
 
-Несложно видеть, что расширение $K(\zpp)/K$ вполне разветвлено. Действительно, $\zp$ будет корнем многочлена $X + c\Pi^b - 1$, тогда $\zpp$ будет корнем многочлена $X^p + c\Pi^b - 1$. !!!! и что дальше??!!!!!
+Таким образом $K(\zpp)$ получается присоединением корня уравнения $X^p = \varepsilon$. Заменим переменную $X = Y + 1$, тогда $Y^p + C_p^{p-1}Y^{p-1} + \cdots + pY = -c\Pi^b$. Пусть $\chi$ --- корень последнего уравнения. Предположим, что $K(\zpp)/K$ неразветвлено, тогда возможны три случая для нормирования $\val(\chi) = \val_{K(\zpp)}(\chi)$.
+\begin{enumerate}
+	\item $\val(\chi) = 0$, тогда $\val(\chi^p + \cdots + p\chi) = 0$, но это невозможно, так как $\val(-c\Pi^b) = b > 0$.
+	\item $1 \Leq \val(\chi) \Leq {e \over p-1}$, тогда $\val(\chi^p + \cdots + p\chi) = \val(\chi^p) = \linebreak = p\val(\chi)$ делится на $p$, но это невозможно, так как $\val(-c\Pi^b) = b$ не делится на $p$.
+	\item $\val(\chi) > {e \over p-1}$, тогда $\val(\chi^p + \cdots + p\chi) \Geq {pe \over p-1}$, так как $\val(\chi^p) = p\val(\chi) > {pe \over p-1}$ и $\val(p\chi) = e + \val(\chi) = {pe \over p-1}$. Но это невозможно, так как $\val(-c\Pi^b) = b < {pe \over p-1}$.
+\end{enumerate}
+Мы предположили неразветвленность расширения \linebreak $K(\zpp)/K$ и получили противоречие.
+
+Отсюда вытекает, что $K(\zpp)/K$ вполне разветвлено.
 \end{proof}
 
 \section{Формальные модули в многомерном поле}
@@ -156,7 +172,9 @@ $F(\MIdeal)$ --- формальный $\ORing$-модуль на идеале $\MIdeal$.
 \end{thm}
 
 \subsection{Вспомогательные результаты}
-Пусть $\xi \in \Ker[\pi_0]$, $\xi \neq 0$, $\xi \in K^{alg}$ --- произвольный элемент ядра изогении $[\pi_0]$. $[\pi_0](X) = \pi_0X\varepsilon(X) + X^{p^h}\theta r(X)$, где $\varepsilon(X), r(X) \in \ORing_0[[X]]$, при этом $\varepsilon(X) \equiv r(X) \equiv 1 \mod X$, а $\theta$ --- представитель система Тейхмюллера в кольце целых поля $k_0$. Ясно, что ${[\pi_0](X) \over X} = \pi_0 \varepsilon_1(X)^{p^h-1} + (X r_1(X))^{p^h-1}\theta$, где $\varepsilon_1(X)^{p^h-1} = \varepsilon(X)$, $r_1(X)^{p^h-1} = r(X)$. Поэтому элемент $\xi$ удовлетворяет уравнению $-\pi_0 = (\xi \ae(\xi))^{p^h-1} \theta$, где $\ae(X) = \varepsilon_1(X)^{-1} r_1(X)$. Поэтому
+Пусть $\xi \in \Ker[\pi_0]$, $\xi \neq 0$, $\xi \in K^{alg}$ --- произвольный элемент ядра изогении $[\pi_0]$. $[\pi_0](X) = \pi_0X\varepsilon(X) + X^{p^h}\theta r(X)$, где $\varepsilon(X), r(X) \in \ORing_0[[X]]$, при этом $\varepsilon(X) \equiv r(X) \equiv 1 \mod X$, а $\theta$ --- представитель система Тейхмюллера в кольце целых поля $k_0$. Ясно, что 
+$${[\pi_0](X) \over X} = \pi_0 \varepsilon_1(X)^{p^h-1} + (X r_1(X))^{p^h-1}\theta,$$
+где $\varepsilon_1(X)^{p^h-1} = \varepsilon(X)$, $r_1(X)^{p^h-1} = r(X)$. Поэтому элемент $\xi$ удовлетворяет уравнению $-\pi_0 = (\xi \ae(\xi))^{p^h-1} \theta$, где $\ae(X) = \varepsilon_1(X)^{-1} r_1(X)$. Поэтому
 \begin{equation} \label{eq:Lxi}
 L(\xi) = L(\sqrt[p^h - 1]{-\theta^{-1}\pi_0}).
 \end{equation}
@@ -168,13 +186,13 @@ L(\xi) = L(\sqrt[p^h - 1]{-\theta^{-1}\pi_0}).
 \begin{proof}
 	Рассмотрим уравнения $X^p = \varepsilon$ и \linebreak $X = Y + 1$, тогда
 	\begin{equation} \label{eq:Lxi}
-	Y^p + c_p^{p-1}Y^{p-1} + \cdots + pY = c \Pi^b \tag{*}.
+	Y^p + C_p^{p-1}Y^{p-1} + \cdots + pY = c \Pi^b \tag{*}.
 	\end{equation}
 	Пусть расширение $K(\sqrt[p]{\varepsilon})/K$ неразветвлено. Тогда, если корень уравнения \eqref{eq:Lxi} $\alpha$ --- единица, то получим противоречие: $\val_L(\alpha) = 0 \implies \val(\alpha^p + \ldots + p\alpha) = 0$, но $\val(c\Pi^b) = b \Geq 1$. Здесь и далее $\val = \val_L$ --- нормирование в поле $L = K(\sqrt[p]{\varepsilon})$.\\
 	Если $\val(\alpha) \Geq 1$, то есть два варианта.
 	\begin{enumerate}
-		\item $1 \Leq \val(\alpha) \Leq {e \over p-1}$, тогда $\val(\alpha^p + c_p^{p-1}\alpha^{p-1} + \cdots + p\alpha) = \val(\alpha^p) = p\val(\alpha)$. Но $\val(c\Pi^b) = b \not\equiv 0 \mod p$ --- противоречие.
-		\item $\val(\alpha) > {e \over p-1}$, тогда $\val(\alpha^p + c_p^{p-1}\alpha^{p-1} + \cdots + p\alpha) \Geq {pe \over p-1}$, так как $\val(\alpha^p) = p\val(\alpha) \Geq {pe \over p-1}$ и $\val(p\alpha) = e + \val(\alpha) \Geq {pe \over p-1}$. С другой стороны, $\val(c\Pi^b) = b < {pe \over p-1}$.
+		\item $1 \Leq \val(\alpha) \Leq {e \over p-1}$, тогда $\val(\alpha^p + C_p^{p-1}\alpha^{p-1} + \cdots + p\alpha) = p\val(\alpha)$. Но $\val(c\Pi^b) = b \not\equiv 0 \mod p$ --- противоречие.
+		\item $\val(\alpha) > {e \over p-1}$, тогда $\val(\alpha^p + C_p^{p-1}\alpha^{p-1} + \cdots + p\alpha) \Geq {pe \over p-1}$. С другой стороны, $\val(c\Pi^b) = b < {pe \over p-1}$.
 	\end{enumerate}
 	Итак, предположение, что $L/K$ неразветвлено приводит к противоречию.
 \end{proof}
@@ -187,18 +205,13 @@ L(\xi) = L(\sqrt[p^h - 1]{-\theta^{-1}\pi_0}).
 		$$ -\pi_0 = (T_1^{i_1'} \cdots T_{n-1}^{i_{n-1}'} \rho_1 u_1)^{p^h-1},$$
 		где $i_k' = {i_k \over p^h-1}$, $1 \Leq k \Leq n-1$; $\rho_1^{p^h-1} = \rho$, $\rho \in \Teich$; и $u_1^{p^h-1} = u$, где $u_1$ --- главная единица в $L$. Отсюда и из \eqref{eq:Lxi} получаем $L(\xi) = L(\sqrt[p^h-1]{\theta^{-1}})$ и, значит, расширение $L/K$ неразветвлено.
 		
-		Если же $(i_1, \ldots, i_{n-1}, e_n)$ не делится на $p^h-1$, то $L(\xi)=L(\sqrt[p^h-1]{T_1^{i_1} \cdots T_{n-1}^{i_{n-1}} \Pi^{e_n}})$ и $L(\xi)/L$ поэтому разветвлено.
+		Если же $(i_1, \ldots, i_{n-1}, e_n)$ не делится на $p^h-1$, то \linebreak $L(\xi)=L(\sqrt[p^h-1]{T_1^{i_1} \cdots T_{n-1}^{i_{n-1}} \Pi^{e_n}})$ и $L(\xi)/L$ поэтому разветвлено.
 \end{proof}
 
 
 
 \begin{thebibliography}{50}
-\bibitem{F-V} Fesenko I. B., Vostokov S. V, {\it Local Fields and Their Extensions}, Second edition, 2002.
-\bibitem{F}  Востоков С. В, Волков П. П., Пак Г. К, {\it Символ Гильберта для многочленных формальных групп}, Зап. науч. сем. ПОМИ, том 400, 2012, стр. 127-132.
-\bibitem{Bor} Боревич З. И., {\it О регулярных локальных полях}, Вестник ЛГУ, 1962, стр. 142-145.
-\bibitem{Ariph} Бенуа Д. Г., Востоков С.В. {\it Арифметика группы точек формальной группы}, Зап. научн. сем. ЛОМИ, 191 (1991),  стр. 9–23.
-\bibitem{Inv} Zhukov I. B., {\it Higher dimensional local fields}, Invitation to higher local fields, 2000, стр. 5-18.
-\bibitem{Hond} Honda T., {\it On the theory of commutative formal groups}, J. Math Soc. Japan, 1970, стр. 213-246.
-\bibitem{Haz} Hazewinkel M., {\it Formal groups and applications}, Academic Press, New York, 1978.
+\bibitem{B} [Б] {\scriptsize\textbf{уточнить, что за работа}} Работа Боревича о регулярных полях.
+\bibitem{V} [В] {\scriptsize\textbf{уточнить, что за работа}} Работа с упоминанием о $p$-примарности образующей мультипликативной группы.
 \end{thebibliography}
 \end{document}
