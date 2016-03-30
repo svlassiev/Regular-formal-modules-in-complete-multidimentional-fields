@@ -1,26 +1,55 @@
-\documentclass[12pt, a4paper]{article}
-\usepackage[left=4cm, right=6cm, top=2cm, bottom=2cm]{geometry}
+\documentclass[10pt, a4paper]{article}
+\usepackage[cp1251]{inputenc}
+\usepackage{geometry}
 \usepackage[english]{babel}
 \usepackage[affil-it]{authblk}
 
-\providecommand{\keywords}[1]{\let\thefootnote\relax\footnote{Keywords: #1}}
+\setlength{\textwidth}{140mm}
+\setlength{\textheight}{200mm}
 
-\renewcommand*{\Authands}{, }
-\renewcommand*{\Affilfont}{\small\it}
-
-\title{Regular Formal Modules in One-dimensional Local Fields \thanks{The article is written with support of RFBR grant \#14-01-00393.}}
-\author[1]{S. M. Vlassiev}
-\author[2]{S. V. Vostokov}
-\author[1]{A. A. Gorshkov}
-\affil[1]{Graduated student at Mathematics and Mechanics faculty, St. Petersburg State University}
-\affil[2]{Professor at Mathematics and Mechanics faculty, St. Petersburg State University}
+\title{Regular Formal Modules \\ in One-dimensional Local Fields \thanks{The article is written with support of RFBR grant \#14-01-00393.}}
+\author{S. M. Vlassiev, S. V. Vostokov, A. A. Gorshkov}
 \date{}
+\providecommand{\keywords}[1]{\let\thefootnote\relax\footnote{Keywords: #1}}
+\newcommand{\Addresses}{{
+		\bigskip
+		
+		S. M. Vlassiev, \textsc{graduated student at Mathematics and Mechanics faculty, St. Petersburg State University,
+			98504,  Universitetsky prospekt, 28, Peterhof, St. Petersburg, Russia}\par\nopagebreak
+		\textit{E-mail}: \texttt{svlassiev@gmail.com}
+		\textit{Phone}: \texttt{+79117448297}
+		
+		\medskip
+		
+		S. V. Vostokov, \textsc{professor at Mathematics and Mechanics faculty, St. Petersburg State University,
+			98504,  Universitetsky prospekt, 28, Peterhof, St. Petersburg, Russia}\par\nopagebreak
+		\textit{E-mail}: \texttt{sergei.vostokov@gmail.com}
+		\textit{Phone}: \texttt{+78129584600}
+		
+		
+		\medskip
+		
+		A. A. Gorshkov, \textsc{graduated student at Mathematics and Mechanics faculty, St. Petersburg State University,
+			98504,  Universitetsky prospekt, 28, Peterhof, St. Petersburg, Russia}\par\nopagebreak
+	}}
+
 
 \begin{document}
 \maketitle
 \keywords{local field, totally regular local field, formal module, formal group}
 
 \begin{abstract}
-This article studies local fields which doesn't contain non-trivial roots of isogeny of formal group over its ring of integers together with its unramified extensions that also doesn't contain such roots. Originally this problem appeared in 1962 in Z. I. Borevich's article during work on tamely ramified extensions in multiplicative formal groups case.
+Studies of regular local fields were started in 1962 in Z. I. Borevich's article during his work on tamely ramified extensions. This article generalizes idea of local fields regularity in terms of formal groups and corresponding formal modules. The article considers formal group over a ring of integers of a local field (finite extension of p-adic numbers) and a formal module built via this formal group over a ring of integers' maximal ideal. To be regular formal module should not contain non-trivial roots of isogeny of corresponding formal group. The article describes totally regular in terms of formal groups local fields, i.e. fields, which are together with all their unramified extensions are regular in terms of formal group. Original Borevich's work may be considered as solution for a case of multiplicative formal groups. This paper is the next step that provides description for totally regular local fields and corresponding formal modules in cases of polynomial formal groups, Lubin-Tate formal groups and Honda formal groups. After classification in special cases was received new problems are stated in the article, e.g. regular and totally regular modules description in multi-dimensional case.
 \end{abstract}
+\begin{thebibliography}{7}
+	\bibitem{F-V} I. B. Fesenko, S. V. Vostokov, {\it Local Fields and Their Extensions}, Second edition, 2002.
+	\bibitem{F}  S. V. Vostokov, V. V. Volkov, G. K. Pak, {\it The Hilbert Symbol of Polynomial Formal Groups},  Zapiski Nauchnykh Seminarov POMI, Vol. 400, 2012, pp. 127?132.
+	\bibitem{Bor} Z. I. Borevich, {\it About regular local fields}, Vestnik LGU, 1962, pp. 142-145.
+	\bibitem{Ariph} D. G. Benois, S. V. Vostokov, {\it Arithmetic of a group of points of a formal group}, Zapiski Nauchnykh Seminarov Leningradskogo Otdeleniya Matematicheskogo Instituta im. V. A. Steklova Akademiya Nauk SSSR, Vol. 191, pp. 9–23, 1991.
+	\bibitem{Inv} I. B. Zhukov, {\it Higher dimensional local fields}, Invitation to higher local fields, 2000, p. 5-18.
+	\bibitem{Hond} T. Honda, {\it On the theory of commutative formal groups}, J. Math Soc. Japan, 1970, pp. 213-246.
+	\bibitem{Haz} M. Hazewinkel, {\it Formal groups and applications}, Academic Press, New York, 1978.
+\end{thebibliography}
+\Addresses
+
 \end{document}
